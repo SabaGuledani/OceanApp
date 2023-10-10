@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsFragment">
+    </fragment>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/standard_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Widget.Material3.BottomSheet"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+                <!-- Drag handle for accessibility -->
+                <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+                    android:id="@+id/drag_handle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="lake name"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:src="@drawable/kustba"
+            android:adjustViewBounds="true"
+            android:maxWidth="350dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+
+
+
+        <TextView
+            android:id="@+id/text_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Recreational lake providing walking paths, paddle boat rentals and public concerts and festivities"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+<LinearLayout
+    android:id="@+id/HV_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/material_dynamic_neutral95"
+    app:layout_constraintTop_toBottomOf="@+id/text_desc"
+    android:background="@drawable/shape_rounded">
+
+    <HorizontalScrollView
+        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pink Salmon"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="5dp"
+                android:padding="10dp"
+                android:background="@drawable/outline_bg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Burbot"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="@drawable/outline_bg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Barbel"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="5dp"
+                android:padding="10dp"
+                android:background="@drawable/outline_bg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trout"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="@drawable/outline_bg"/>
+
+        </LinearLayout>
+
+
+
+
+    </HorizontalScrollView>
+    
+    
+</LinearLayout>
+    
+       
+
+        <HorizontalScrollView
+            android:id="@+id/HV_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded"
+            android:layout_marginTop="10dp"
+            android:scrollbarSize="0dp"
+            android:backgroundTint="@color/material_dynamic_neutral95"
+            app:layout_constraintTop_toBottomOf="@+id/HV_1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Water lily"
+                    android:textSize="18sp"
+                    android:layout_marginHorizontal="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/outline_bg"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cattail"
+                    android:layout_marginHorizontal="5dp"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:background="@drawable/outline_bg"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pondweed"
+                    android:textSize="18sp"
+                    android:layout_marginHorizontal="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/outline_bg"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hornwort"
+                    android:layout_marginHorizontal="5dp"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:background="@drawable/outline_bg"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="utricularia"
+                    android:layout_marginHorizontal="5dp"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:background="@drawable/outline_bg"/>
+
+            </LinearLayout>
+
+
+
+
+        </HorizontalScrollView>
+        <HorizontalScrollView
+            android:id="@+id/HV_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/material_dynamic_neutral95"
+            app:layout_constraintTop_toBottomOf="@+id/HV_2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Baumannii"
+                    android:textSize="18sp"
+                    android:layout_marginHorizontal="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/outline_bg"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="hydrophil"
+                    android:layout_marginHorizontal="5dp"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:background="@drawable/outline_bg"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="jejuni"
+                    android:textSize="18sp"
+                    android:layout_marginHorizontal="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/outline_bg"/>
+
+            </LinearLayout>
+
+
+
+
+
+        </HorizontalScrollView>
+        <TextView
+            android:id="@+id/TV_pollution_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Pollution status"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/HV_3"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <TextView
+            android:id="@+id/TV_pollution_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="relatively clean lake, but there is some pollution from agricultural runoff and sewage."
+            android:padding="20dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TV_pollution_status"/>
+
+        <TextView
+            android:id="@+id/TV_predator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Predators in Area"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/TV_pollution_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <TextView
+            android:id="@+id/TV_predator_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eurasian otter, Northern pike, European catfish"
+            android:padding="20dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TV_predator" />
+
+
+        <TextView
+            android:id="@+id/TV_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Tips"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/TV_predator_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <TextView
+            android:id="@+id/TV_tips_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*Be aware of your surroundings and avoid swimming in areas where there are known predators.\n Be careful when swimming in areas with dense vegetation.Do not swim alone.\n *Swim during daylight hours."
+            android:padding="20dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TV_tips" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+

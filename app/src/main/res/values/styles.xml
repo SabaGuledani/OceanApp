@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="rounded">
+        <item name="cornerSize">10%</item>
+    </style>
+    <style name="more_rounded">
+        <item name="cornerSize">30%</item>
+    </style>
+    <style name="circle">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="customRoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+
+    </style>
+
+</resources>
